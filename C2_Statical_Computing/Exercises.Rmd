@@ -1,0 +1,33 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Exercise 2.2:
+
+Use seq(–2,2,.1) to obtain a range of x values for input to the probability function
+f (x) which is defined as
+
+f (x) = 2x for 0 ≤ x ≤ 1 && 0 elsewhere.
+```{r}
+f <-function(x){
+  return(ifelse(0 <= x & x <= 1,2*x,0))
+}
+x = seq(-2,2,.1)
+#print("x:")
+x
+#print("f(x):")
+sapply(x,f)
+
+```
+
+Exercise 2.3:
+
+Write R code to find the squares of the numbers from 1 to 25 and plot the numbers
+on the x axis and their squares on the y axis. Hint: you can use the c() operator to
+append an element to a vector.
+```{r}
+x = c(1:25)
+plot(x,x^2,type = 'l')
+```
+
